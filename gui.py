@@ -1,5 +1,5 @@
 import tkinter as tk
-
+from grafik_deneme import grafik_goster
 from rules_engine import musteri_getir,sigorta_onerileri_bul
 from pricing import prim_hesapla
 from policy_issuer import police_olustur
@@ -58,7 +58,6 @@ def police_kes_tiklandi():
     messagebox.showinfo("Başarılı İşlem",f"{sigorta_adi} poliçesi başarıyla oluşturuldu ve sisteme kaydedildi!")    
 
 
-        
 tc_etiket=tk.Label(pencere, text="Lütfen Müşteri T.C. kimlik Numarasını giriniz:",bg="#f0f0f0",font=("Arial",12,"bold"))
 tc_etiket.pack(pady=20)
 
@@ -67,6 +66,9 @@ tc_kutu.pack(pady=10)
 
 sorgula_buton=tk.Button(pencere,text="Müşteri Sorgula",command=sorgula_tiklandi,bg="#4CAF50",fg="white",font=("Arial",12,"bold"))
 sorgula_buton.pack(pady=10)
+
+grafik_buton=tk.Button(text="3D Piyasa Analizini Göster",command=grafik_goster,bg="#4CAF50",font=("Arial",10,"bold"))
+grafik_buton.pack(pady=10)
 
 teklif_kutu=tk.Listbox(pencere,font=("Arial",12),width=45,height=5)
 teklif_kutu.pack(pady=10)
