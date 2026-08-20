@@ -1,4 +1,4 @@
-Machine Learning Based Auto Insurance Pricing System
+# Machine Learning Based Auto Insurance Pricing System
 
 This project is a desktop application that calculates motor insurance premiums dynamically using Machine Learning algorithms, replacing traditional rule-based evaluation methods. 
 
