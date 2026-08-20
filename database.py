@@ -36,8 +36,8 @@ def init_db():
 
     ornek_musteriler= [
      ("12371979082","Fatma KOCATEPE",37,"KONUT",160,6,0,4),
-     ("23451121456","Burcu ESENSOY",29,"TASIT",0,0,670000.0,6),
-     ("98769823412","Mustafa GÜRLER",54,"IHTIYAC",90,18,600000.0,3),
+     ("23451121456","Burcu ESENSOY",29,"TASIT",0,0,600000,3),
+     ("98769823412","Mustafa GÜRLER",54,"IHTIYAC",90,18,670000.0,6),
      ("20191765398","Ahmet Murat TAYLAN",24,"YOK",0,0,0,4)
     ]
     

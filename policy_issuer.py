@@ -32,7 +32,9 @@ secilen_sigorta="DASK (Zorunlu Deprem Sigortası)"
 onaylanan_tutar=3400.0
 
 koruma_bedeli=150000.0
-police_olustur(onaylayan_tc,secilen_sigorta,onaylanan_tutar,koruma_bedeli)
+if __name__=="__main__":
+    
+    police_olustur(onaylayan_tc,secilen_sigorta,onaylanan_tutar,koruma_bedeli)
 
 
 

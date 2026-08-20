@@ -27,7 +27,7 @@ def sigorta_onerileri_bul(musteri):
         oneriler.append("Kredi Hayat Sigortası")
     elif kredi_turu=="TASIT":
         oneriler.append("Zorunlu Trafik Sigortası") 
-        oneriler.append("Genisletilmis Kasko")
+        oneriler.append("Genişletilmiş Kasko")
         oneriler.append("Kredi Hayat Sigortası")
     elif kredi_turu=="IHTIYAC":
         oneriler.append("Kredi Hayat Sigortası")

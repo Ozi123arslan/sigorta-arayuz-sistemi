@@ -1,3 +1,18 @@
+from sklearn.linear_model import LinearRegression
+
+X_gecmis=[
+    [400000,1],
+    [400000,7],
+    [800000,2],
+    [1000000,6],
+    [500000,4]
+]
+y_gecmis = [20000,8000,35000,15000,14000]
+
+kasko_modeli=LinearRegression()
+kasko_modeli.fit(X_gecmis,y_gecmis)
+
+
 def prim_hesapla(sigorta_turu,musteri):
 
     yas=musteri[2]
@@ -13,9 +28,10 @@ def prim_hesapla(sigorta_turu,musteri):
         toplam_prim=taban_fiyat+m2_maliyeti+yas_riski
         return toplam_prim
     elif sigorta_turu=="Genişletilmiş Kasko":
-        temel_risk_primi=arac_degeri*0.05
-        indirimli_prim=temel_risk_primi/hasarsizlik_kademesi
-        return indirimli_prim
+        print(f"Dikkat modele giden araç değeri => {arac_degeri},kademe => {hasarsizlik_kademesi}")
+        anlik_musteri_verisi=[[float(arac_degeri),int(hasarsizlik_kademesi)]]
+        yapay_zeka_tahmini=kasko_modeli.predict(anlik_musteri_verisi)
+        return yapay_zeka_tahmini[0]
     elif sigorta_turu=="Kredi Hayat Sigortası":
         yas_carpani=85
         toplam_prim=yas*yas_carpani
@@ -30,8 +46,8 @@ def prim_hesapla(sigorta_turu,musteri):
 if __name__=="__main__":
     from database import init_db
     from rules_engine import musteri_getir,sigorta_onerileri_bul
-
-    aranan_tc="12371979082"  
+if __name__=="__main__":
+    aranan_tc="23451121456"  
     musteri=musteri_getir(aranan_tc)
 
     if musteri:
